@@ -1,3 +1,19 @@
+# Si realizzi in Bash una semplice Container Engine che funziona senza richiedere privilegi di amministratore.
+# Essa deve permettere di eseguire un programma in un ambiente isolato.
+# 
+# Requisiti:
+# - Deve essere possibile eseguire un programma specificando un file di configurazione e il comando da eseguire.
+# - Il container deve utilizzare un ambiente temporaneo creato in una directory di lavoro temporanea.
+# - Il file di configurazione deve contenere l'elenco dei binari necessari e delle directory da copiare o montare nell'ambiente isolato.
+# - Deve utilizzare fakechroot e chroot per l'isolamento senza richiedere privilegi di amministratore.
+# - Deve eseguire il programma specificato nel container e fornire l'output all'utente.
+# - Alla fine dell'esecuzione, deve pulire l'ambiente temporaneo creato.
+
+# Esempio di utilizzo:
+# ./container-run.sh conf-file.txt /bin/ls -lh /lib
+
+
+
 #!/bin/bash
 
 # Controllo che siano stati passati almeno due argomenti
