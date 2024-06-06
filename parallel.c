@@ -1,3 +1,23 @@
+/*
+Si realizzi in C una versione semplificata del comando GNU parallel .
+Il programma deve accettare tre argomenti:
+    1. Il nome di un file dove il programma legge, uno per riga , i parametri del comando che deve eseguire
+    2. Un numero che rappresenta quanti processi in parallelo deve eseguire
+    3. Una stringa che rappresenta il comando da eseguire. La stringa deve contenere il carattere % che verrà sostituito dal programma con i parametri letti dal file passato come primo argomento.
+Esempio:
+Se viene eseguito ./parallel args.txt 2 "ls % - lh " e il file args.txt contiene:
+    /etc/resolv.conf
+    /etc/fstab
+    /etc/hostname
+    /etc/hosts
+Il programma deve leggere le 4 righe dal file args.txt e sostituirle al carattere % nella stringa passata come terzo argoment o per creare 4 comandi che esso deve eseguire usando 2 
+processi in parallelo. I comandi da eseguire saranno pertanto:
+    ls /etc/resolv.conf -lh
+    ls /etc/fstab -lh
+    ls /etc/hostname -lh
+    ls /etc/hosts -lh
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
