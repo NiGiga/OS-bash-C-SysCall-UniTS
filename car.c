@@ -1,3 +1,29 @@
+/*
+sviluppare un programma per la gestione di un autonoleggio con più operatori concorrenti.
+
+Funzionalita' da sviluppare:
+
+Gestione del parco macchine:
+
+Il programma deve leggere un file catalog.txt che contiene gli identificativi delle vetture.
+Il programma deve permettere di visualizzare lo stato delle vetture (libere o occupate), noleggiare una vettura (lock) e rilasciare una vettura (release).
+Comandi del programma:
+
+view: visualizza lo stato delle vetture.
+lock <vettura>: noleggia una vettura se non è già noleggiata.
+release <vettura>: rilascia una vettura noleggiata.
+quit: termina il programma.
+Gestione concorrente:
+
+Il programma deve supportare più operatori simultanei.
+Si consiglia l'uso di semafori nominati per gestire lo stato delle vetture.
+Persistenza dello stato:
+
+Lo stato del programma deve persistere tra i riavvii.
+
+
+*/
+    
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
