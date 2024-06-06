@@ -1,3 +1,16 @@
+/*
+* Si realizzi un programma in C che stampa i dettagli di tutti i file contenuti in una cartella e in tutte le sue sottocartelle. Il programma deve visitare ricorsivamente tutte le cartelle a partire da una cartella 
+* radice, e stampare le seguenti informazioni su ogni file o cartella che trova:
+*  Nome: percorso completo del file relativo alla cartella radice
+*  Numero di Inode:
+*  Tipo: si vedano i tipi che può assumere un inode a:https://man7.org/linux/man-pages/man7/inode.7.html
+*    o Si considerino solo i casi:file, directory, symbolic link e FIFO
+*    o Si stampino esattamente le diciture indicate al punto precedente. Si stampi other per altri tipi di inode.
+*  Dimensione: in Byte
+*  Utente Proprietario: user id e username, separati da spazio (si consideri la funzione getpwuid)
+*  Gruppo Proprietario: group ID e nome del gruppo, separati da spazio (si consideri la funzione getgrgid)
+*/
+
 #include <stdio.h>      // Per funzioni di input/output come printf
 #include <sys/types.h>  // Definisce tipi come uid_t, gid_t, etc.
 #include <sys/stat.h>   // Definisce la struttura stat per ottenere informazioni sui file
